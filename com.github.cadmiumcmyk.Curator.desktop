@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Curator
+Comment=Manage your portfolios
+Exec=curator.sh
+Icon=com.github.cadmiumcmyk.Curator
+Terminal=false
+Type=Application
+Categories=Utility;GTK;GNOME;
+StartupNotify=true

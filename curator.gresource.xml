@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/cadmiumcmyk/Curator">
+    <file compressed="true">window.ui</file>
+    <file>style.css</file>
+    <file>com.github.cadmiumcmyk.Curator.svg</file>
+  </gresource>
+</gresources>

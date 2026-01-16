@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.github.cadmiumcmyk.Curator</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL</project_license>
+  <name>Curator</name>
+  <summary>Manage your portfolios</summary>
+  <content_rating type="oars-1.1" />
+  <description>
+    <p>A simple portfolio manager for visual arts and photography..</p>
+  </description>
+  <icon type="stock">com.github.cadmiumcmyk.Curator.svg</icon>
+  <launchable type="desktop-id">com.github.cadmiumcmyk.Curator.desktop</launchable>
+</component>

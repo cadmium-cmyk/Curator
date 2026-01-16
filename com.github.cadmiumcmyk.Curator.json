@@ -1,0 +1,54 @@
+{
+  "app-id": "com.github.cadmiumcmyk.Curator",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "49",
+  "sdk": "org.gnome.Sdk",
+  "command": "curator.sh",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--device=dri",
+    "--filesystem=xdg-data",
+    "--talk-name=org.freedesktop.Notifications"
+    
+  ],
+  "modules": [
+      "python3-pybind11.json",
+      "python3-pillow.json",
+    {
+      "name": "curator",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -D -p main.py /app/bin/main.py",
+        "install -D -p style.css /app/bin/style.css",
+        "mkdir -p /app/bin/src",
+
+        "install -D -p src/__init__.py /app/bin/src/__init__.py",
+        "install -D -p src/config.py /app/bin/src/config.py",
+        "install -D -p src/export.py /app/bin/src/export.py",
+        "install -D -p src/main.py /app/bin/src/main.py",
+        "install -D -p src/models.py /app/bin/src/models.py",
+        "install -D -p src/utils.py /app/bin/src/utils.py",
+        "mkdir -p /app/bin/src/ui",
+        "install -D -p src/ui/dialogs.py /app/bin/src/ui/dialogs.py",
+        "install -D -p src/ui/orientation.py /app/bin/src/ui/orientation.py",
+        "install -D -p src/ui/window.py /app/bin/src/ui/window.py",
+        "glib-compile-resources --target=curator.gresource curator.gresource.xml",
+        "install -D -p curator.gresource /app/bin/curator/curator.gresource",
+        "install -D -p curator.sh /app/bin/curator.sh",
+        "chmod +x /app/bin/curator.sh",
+        
+        "install -D -p com.github.cadmiumcmyk.Curator.desktop /app/share/applications/com.github.cadmiumcmyk.Curator.desktop",
+        "install -D -p com.github.cadmiumcmyk.Curator.svg /app/share/icons/hicolor/128x128/apps/com.github.cadmiumcmyk.Curator.svg",
+        "install -D -p com.github.cadmiumcmyk.Curator.metainfo.xml /app/share/metainfo/com.github.cadmiumcmyk.Curator.metainfo.xml"
+      ],
+      "sources": [
+        {
+          "type": "dir",
+          "path": "."
+        }
+      ]
+    }
+  ]
+}

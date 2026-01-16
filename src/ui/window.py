@@ -544,7 +544,7 @@ class PortfolioWindow(Adw.ApplicationWindow):
             copyright="© 2026 Andrew Blair",
             website="https://github.com/cadmiumcmyk/Curator",
             issue_url="https://github.com/cadmiumcmyk/Curator/issues",
-            license_type=Gtk.License.MIT_X11,
+            license_type=Gtk.License.GPL_3_0,
             modal=True,
             transient_for=self
         )

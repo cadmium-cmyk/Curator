@@ -355,6 +355,7 @@ class PortfolioWindow(Adw.ApplicationWindow):
         box = Gtk.Box(css_classes=["tag-chip"])
         lbl = Gtk.Label(label=tag)
         btn = Gtk.Button(icon_name="window-close-symbolic", css_classes=["flat"])
+        btn.set_tooltip_text("Remove tag")
         btn.connect("clicked", lambda b: self.remove_tag(tag))
         box.append(lbl)
         box.append(btn)

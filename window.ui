@@ -239,10 +239,12 @@
                       <object class="GtkMenuButton">
                         <property name="icon-name">open-menu-symbolic</property>
                         <property name="menu-model">primary_menu</property>
+                        <property name="tooltip-text">Main Menu</property>
                       </object>
                     </child>
                     <child type="end">
                        <object class="GtkDropDown" id="sort_dropdown">
+                         <property name="tooltip-text">Sort Items</property>
                          <property name="model">
                            <object class="GtkStringList">
                              <items>
